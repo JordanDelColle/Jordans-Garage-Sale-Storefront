@@ -2,11 +2,9 @@ import React from 'react';
 import Image from 'next/image'
 import {productCard, price, name, description, format} from './styles.module.scss'
 
-
 const myLoader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`
 }
-
 
 function ProductCard ({children, product, ...props})  {
   const {productName, productPrice, productDescription, productFormat, imageUrl, uid}= {...product}
@@ -22,6 +20,7 @@ function ProductCard ({children, product, ...props})  {
               quality={50}
               layout="intrinsic"
            />
+
         
          </header>
           <h2 className={name}>{productName}</h2>

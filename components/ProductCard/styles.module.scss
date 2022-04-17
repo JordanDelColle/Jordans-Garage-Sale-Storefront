@@ -1,8 +1,12 @@
+ .emptyProductCard{
+     width: 15vw;
+ }
+ 
  .productCard{
       margin: 2rem auto 4rem;
       background-color: #000;
-      display: flex;
-      align-items: center;
+    //   display: flex;
+    //   align-items: center;
       padding-bottom: 20vh;
     footer{
         margin: 1rem 0;
@@ -45,9 +49,9 @@
   
  @media (min-width:600px){
     .productCard{
-        display:flex;
-        flex-direction: column;
-        justify-content: space-between;
+        // display:flex;
+        // flex-direction: column;
+        // justify-content: space-between;
         margin: 0;
     }
     .price{

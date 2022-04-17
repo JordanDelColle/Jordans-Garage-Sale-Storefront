@@ -1,15 +1,17 @@
 import {PageTitle} from './../components/PageTitle'
 import ProductCard from '../components/ProductCard/ProductCard';
+import EmptyProductCard from '../components/ProductCard/EmptyProductCard';
 import Head from 'next/head'
-import { PanelBody, IconPanel } from './styles';
+import {PanelBody, IconPanel} from './styles';
 
 export default function Home(props) {
+  const fullRowLength = 4
   const products = props.products;
   //const stripePromise = (process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
   let myProducts = products.map(product => <ProductCard key={product.uid} product={product}/>)
   let myRows = myProducts.length;
+  
   function getFullRowCount() {
-      
       let count = myRows/4;
       return count;
   }
@@ -65,9 +67,9 @@ export default function Home(props) {
                     (<PanelBody>
                         <IconPanel>
                             {myProducts[currentProduct]}
-                            {<EmptyIcon/>}
-                            {<EmptyIcon/>}
-                            {<EmptyIcon/>}
+                            {<EmptyProductCard/>}
+                            {<EmptyProductCard/>}
+                            {<EmptyProductCard/>}
                         </IconPanel>
                     </PanelBody>)
                 }
@@ -78,8 +80,8 @@ export default function Home(props) {
                         <IconPanel>
                             {myProducts[currentProduct]}
                             {myProducts[currentProduct+1]}
-                            {<EmptyIcon/>}
-                            {<EmptyIcon/>}
+                            {<EmptyProductCard/>}
+                            {<EmptyProductCard/>}
                         </IconPanel>
                     </PanelBody>)
                 }
@@ -91,7 +93,7 @@ export default function Home(props) {
                             {myProducts[currentProduct]}
                             {myProducts[currentProduct+1]}
                             {myProducts[currentProduct+2]}
-                            {<EmptyIcon/>}
+                            {<EmptyProductCard/>}
                         </IconPanel>
                     </PanelBody>)
                 }
@@ -120,7 +122,8 @@ let allProducts = createProductCards()
     </Head>
     <PageTitle tagline="featured products" title="Jordan's Garage Sale"/>
     <main>
-      {products.map(product => <ProductCard key={product.uid} product={product}/>)}
+      {/* {products.map(product => <ProductCard key={product.uid} product={product}/>)} */}
+      {allProducts}
     </main>
     </>
   )
