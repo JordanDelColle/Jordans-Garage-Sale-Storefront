@@ -25,5 +25,7 @@ const IconPanel = styled.div`
     justify-content: space-evenly;
     padding: 5vh 3vw;
 `
-
+export default function returnNull() {
+    return null;
+}
 export {PanelsStyles, PanelHeader, PanelBody, IconPanel} 
