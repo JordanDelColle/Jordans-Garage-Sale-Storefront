@@ -28,4 +28,5 @@ const IconPanel = styled.div`
 export default function returnNull() {
     return null;
 }
+
 export {PanelsStyles, PanelHeader, PanelBody, IconPanel} 
