@@ -5,72 +5,72 @@
  .productCard{
       margin: 2rem auto 4rem;
       background-color: #000;
-    //   display: flex;
-    //   align-items: center;
-      padding-bottom: 20vh;
+      display: flex;
+      align-items: center;
+      padding-top: 10vh;
     footer{
         margin: 1rem 0;
     }
     button{
         border:none;
-        background-color: #3b82f6;
-        color:#eff6ff;
+        background-color: #ED1B24;
+        color:#DCDCDC;
         padding: 0.5rem 2rem;
         border-radius: 3px;
         font-size:1.25rem;
+    }
+    button:hover{
+        background-color: #A50021;
+        cursor: pointer;
     }
  }
 
  .price{
    font-size:1.75rem;
    font-weight: 200;
-   color:#FFF;
+   color: #696969;
    margin: 0.25rem 0;
  }
 
  .description{
     font-size: 14px;
-    color:#FFF;
+    color: #708090;
     width: 15vw;
  }
 
  .name{
      font-size: 2.75rem;
      font-weight: 800;
-     color:#FFF;
+     color: #C0C0C0;
      width: 15vw;
      text-align: center;
  }
 
  .format{
-    color: black
+    color: #2F4F4F;
 }
 
   
  @media (min-width:600px){
     .productCard{
-        // display:flex;
-        // flex-direction: column;
-        // justify-content: space-between;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
         margin: 0;
     }
     .price{
         font-size:1.75rem;
         font-weight: 200;
-        color:#FFF;
         margin: 0.25rem 0;
       }
      
       .description{
          font-size: 14px;
-         color:#FFF;
-     
       }
      
       .name{
           font-size: 1.75rem;
           font-weight: 800;
-          color:#FFF;
       }
 
 }

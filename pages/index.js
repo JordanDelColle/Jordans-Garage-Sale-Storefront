@@ -7,7 +7,6 @@ import {PanelBody, IconPanel} from './styles';
 export default function Home(props) {
   const fullRowLength = 4
   const products = props.products;
-  //const stripePromise = (process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
   let myProducts = products.map(product => <ProductCard key={product.uid} product={product}/>)
   let myRows = myProducts.length;
   
@@ -122,7 +121,6 @@ let allProducts = createProductCards()
     </Head>
     <PageTitle tagline="featured products" title="Jordan's Garage Sale"/>
     <main>
-      {/* {products.map(product => <ProductCard key={product.uid} product={product}/>)} */}
       {allProducts}
     </main>
     </>
